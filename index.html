@@ -223,16 +223,18 @@
         //transition: 'cubic-bezier(.2,.6,.6,.2)',
         overflow: true
     });
-    const navbar = document.getElementById('header')
+
+    /* == Asigna la clase "stuck" en caso de hacer scroll == */
+    const navbar = document.getElementById('header');
     // OnScroll event handler
     const onScroll = () => {
         // Get scroll value
-        const scroll = document.documentElement.scrollTop
+        const scroll = document.documentElement.scrollTop;
         // If scroll value is more than 0 - add class
         if (scroll > 0) {
             navbar.classList.add("stuck");
         } else {
-            navbar.classList.remove("stuck")
+            navbar.classList.remove("stuck");
         }
     }
     // Use the function

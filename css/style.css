@@ -1,0 +1,125 @@
+
+/*
+    no haria import dentro de css,
+    usaria scss o less, pero a fines de entregar un archivo mas simple,
+    lo importo aqui
+*/
+@import "menu.css";
+
+body{font-family: 'Inter', arial, sans-serif;}
+.z1{z-index:100}
+
+#header{
+    transition: all .2s ease-in-out;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, .5);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+#header.stuck{
+    color: var(--bs-white);
+}
+#header.stuck{
+    background: var(--bs-white) !important;
+}
+#header .btn{
+    font-size: inherit;
+}
+
+/* == hero == */
+#hero{
+    padding-top: 80px;
+    position:relative;
+    background: url('../img/hero-bg.jpg') no-repeat 100% 100%;
+    background-size: cover;
+}
+#hero .hero-misc{
+    position: absolute;
+    right: 70%;
+    bottom: 100px;
+    object-fit: contain;
+    max-width: 50%;
+}
+@media(min-width:992px){
+    #hero .hero-misc{
+        position: absolute;
+        right: 40%;
+        bottom: 250px;
+    }
+}
+#hero .img{
+    margin-top: -20%;
+    margin-bottom: -20%;
+}
+@media(min-width:1024px){
+    #hero .img{
+        margin-top: 10%;
+        margin-bottom: -30%;
+    }
+}
+
+
+/* == footer == */
+#footer{
+    font-size: .8em;
+    padding: 5rem 0;
+    background: #212529;
+}
+#footer a{
+    color: inherit;
+    text-decoration: none;
+}
+#footer a:hover{
+    text-decoration: underline;
+}
+
+/* == typography == */
+.heading{
+    font-weight: 700
+}
+.heading-stroke{
+    position:relative;
+}
+.heading-stroke:after{
+    content:"";
+    position: absolute;
+    height:4px;
+    width: 50px;
+    background-color: var(--bs-primary);
+    bottom: -.4em;
+    left: 0px;
+
+}
+
+/* == sections == */
+.section{
+    padding:4rem 0;
+}
+@media(min-width:768px){
+    .section{
+        padding:8rem 0;
+    }
+}
+.section__alt{
+    background-color: #ebf3ff;
+}
+@media(max-width:992px){
+    .text-white-md,
+    .text-white-md *{
+        color: var(--bs-white);
+    }
+}
+
+
+/* == elements == */
+
+@media(min-width:1024px){
+.box-icons{
+    margin-top: 6rem;
+}
+.box-icons img.box-icon{
+    margin-top: -6rem;
+}
+}

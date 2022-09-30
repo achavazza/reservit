@@ -1,0 +1,55 @@
+.navbar-toggler{
+    padding: .4rem;
+    border: transparent;
+}
+.navbar-toggler:hover {
+    text-decoration: none;
+}
+.navbar-toggler:active,
+.navbar-toggler:focus {
+    border: transparent;
+    box-shadow: 0 0 0 transparent;
+}
+.nav-item {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .8em;
+}
+.nav-item .dropdown-menu {
+    text-transform: none;
+}
+
+
+.navbar-toggler .icon-bar {
+	width: 22px;
+	transition: all 0.2s;
+    height: 2px;
+    background: var(--bs-body-color);
+    display: block;
+    margin: 5px;
+    transform-origin: 15%;
+}
+
+/* ANIMATED X */
+.navbar-toggler .icon-bar:nth-of-type(1) {
+	transform: rotate(45deg) translateX(2px);
+}
+.navbar-toggler .icon-bar:nth-of-type(2) {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.navbar-toggler .icon-bar:nth-of-type(3) {
+	transform: rotate(-45deg) translateX(2px);
+}
+/* ANIMATED X COLLAPSED */
+.navbar-toggler.collapsed .icon-bar:nth-of-type(1) {
+	transform: rotate(0);
+}
+.navbar-toggler.collapsed .icon-bar:nth-of-type(2) {
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+.navbar-toggler.collapsed .icon-bar:nth-of-type(3) {
+	transform: rotate(0);
+}
+/* END ANIMATED X */
